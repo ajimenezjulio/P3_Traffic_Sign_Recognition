@@ -60,3 +60,56 @@ These were the resultant images at each augmentation step in the training set:
 | Augment by balancing      |  	    86,000        |
 
 ![Data_Distribution_Before_Balancing](https://github.com/ajimenezjulio/P3_Traffic_Sign_Recognition/blob/master/Markdown/Data_Distribution_After_Balancing.png)
+
+
+### 4. Model
+
+The model used for this project is a modified version of the LeNet architecture, each layer is described below:
+
+![Lenet](https://github.com/ajimenezjulio/P3_Traffic_Sign_Recognition/blob/master/Markdown/Lenet.png)
+
+| Layer       	    |     Input	        |     Output	        | 
+|:-----------------:|:-----------------:|:-------------------:|
+| Convolution 1 - 5 x 5    | 32 x 32 x 3 (RGB Image) |  32 x 32 x 16 |
+| MaxPool 2x2    | 32 x 32 x 16 |  16 x 16 x 16 |
+| - | - | - |
+| Convolution 2 - 5 x 5    | 16 x 16 x 16 |  16 x 16 x 32 |
+| MaxPool 2x2    | 16 x 16 x 32 |  8 x 8 x 32 |
+| - | - | - |
+| Convolution 3 - 5 x 5    | 8 x 8 x 32 |  8 x 8 x 64 |
+| MaxPool 2x2    | 8 x 8 x 64 |  4 x 4 x 64 |
+| - | - | - |
+| Flatten    | 4 x 4 x 64 |  1 x 1024 |
+| - | - | - |
+| Dense 1   |1 x 1024 |  1 x 84 |
+| - | - | - |
+| Dense 2   |1 x 84 |  1 x 43 |
+
+Additionally every activation function and droput value is shown below:
+
+| Layer       	    |     Activation	        |     Dropout	        | 
+|:-----------------:|:-----------------:|:-------------------:|
+| Convolution 1    | ReLU | 0.9 |
+| Convolution 2    | ReLU | 0.6 |
+| Convolution 3    | ReLU | 0.6 |
+| Dense 1    | ReLU | 0.5 |
+
+
+### 4.1 Accuracy
+
+In order to get reproducible results a seed of **17** was used in this project, also a batch size of **128** was implemented. The table below contains the accuracy results at different epochs in the network.
+
+| Epoch | Training set | Validation set | Test set |
+|:-----:|:------------:|:--------------:|:--------:|
+| 1 | 0.031814 | 0.007483 | 0.007047 |
+| 5 | 0.256081 | 0.265306 | 0.283769 |
+| 10 | 0.559570 | 0.537642 | 0.539667 |
+| 50 | 0.962407 | 0.953515 | 0.948614 |
+| 200 | 0.984674 | 0.976417 | 0.975693 |
+
+![Accuracy_Training](https://github.com/ajimenezjulio/P3_Traffic_Sign_Recognition/blob/master/Results/3conv-2fc%203-16-32-64-1024-84-43__0.0005_128_Final.jpeg)
+
+
+
+
+## TODO: Calculate size of dataset
