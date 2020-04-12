@@ -16,19 +16,18 @@ The goals / steps of this project are the following:
 
 ---
 
-### 1. Approach
+### 1. Examine the Dataset
 
-My final model consisted of the following layers:
+The dataset used for this project is [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) and was splitted in the following way.
 
-| Layer         		|     Description	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
- 
+| Dataset         	|     Number of samples	        | 
+|:-----------------:|:-----------------------------:| 
+| Training        |   		34,799		  	| 
+| Validation      |  	    4,410         |
+| Test				    |				12,630				|
+| Unique classes	|				43			    	|
+
+Every image has a dimension of **32 x 32 x 3** (widht, height, channels), below a representation of the dataset is shown.
+
+![Data_Representation](https://github.com/ajimenezjulio/P3_Traffic_Sign_Recognition/blob/master/Markdown/Data_Representation.png)
+
