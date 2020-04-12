@@ -3,7 +3,7 @@
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 
-In this project we built a traffic sign classifier based on the German traffic sign dataset using a deep neural network trained in the tensorflow framework.
+In this project we built a traffic sign classifier based on the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) using a deep neural network trained in tensorflow.
 
 
 The goals / steps of this project are the following:
@@ -16,19 +16,47 @@ The goals / steps of this project are the following:
 
 ---
 
-### 1. Approach
+### 1. Examine the dataset
 
-My final model consisted of the following layers:
+The dataset used for this project is [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) and was splitted in the following way.
 
-| Layer         		|     Description	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
- 
+| Dataset         	|     Number of samples	        | 
+|:-----------------:|:-----------------------------:| 
+| Training        |   		34,799		  	| 
+| Validation      |  	    4,410         |
+| Test				    |				12,630				|
+| Unique classes	|				43			    	|
+
+Every image has a dimension of **32 x 32 x 3** (widht, height, channels), below a representation of the dataset is shown.
+
+![Data_Representation](https://github.com/ajimenezjulio/P3_Traffic_Sign_Recognition/blob/master/Markdown/Data_Representation.png)
+
+
+### 2. Dataset distribution analysis
+
+Unfortunately the dataset is unbalanced and some classes have a large number of samples while others only a few, the following table and graph show this disparity.
+
+| Dataset         	|   Maximum Samples	   |   Minimum Samples	   | 
+|:-----------------:|:--------------------:|:---------------------:| 
+| Training        |  2,010  |  180  |
+| Test            |  750    |  60  |
+
+![Data_Distribution_Before_Balancing](https://github.com/ajimenezjulio/P3_Traffic_Sign_Recognition/blob/master/Markdown/Data_Distribution_Before_Balancing.png)
+
+
+### 3. Preprocess
+
+The following steps were performed to augment, distort and perturb the dataset.
+
+1. **Data augmentation** by flippiing it (horizontally, vertically and both). We need to be aware that some classes must be classified as a different class when flipped, e.g, turn left and right classes.
+1. **Balance** the data to 2,000 samples per class by extending each class with random images from the same class.
+1. **Perturb** 80 percent of the images by randomly distort them and modifying the brightness, contrast and saturation levels.
+
+These were the resultant images at each augmentation step in the training set:
+
+| Step       	|     Number of images	        | 
+|:-----------------:|:-----------------------:| 
+| Augment by flipping       |   		59,788		  	| 
+| Augment by balancing      |  	    86,000        |
+
+![Data_Distribution_Before_Balancing](https://github.com/ajimenezjulio/P3_Traffic_Sign_Recognition/blob/master/Markdown/Data_Distribution_After_Balancing.png)
