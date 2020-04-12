@@ -95,7 +95,7 @@ Additionally every activation function and droput value is shown below:
 | Dense 1    | ReLU | 0.5 |
 
 
-### 4.1 Accuracy
+### 5. Accuracy
 
 In order to get reproducible results a seed of **17** was used in this project, also a batch size of **128** was implemented. The table below contains the accuracy results at different epochs in the network.
 
@@ -111,7 +111,7 @@ In order to get reproducible results a seed of **17** was used in this project, 
 
 After 200 epochs the model could get above 97% of accuracy for all datasets which makes it a fairly decent approach.
 
-### Feature maps
+### 6. Feature maps
 
 In order to understand the weights the model is using for the classification task in a better way, it is a good idea to visualize them, so we can have an idea of the abstract patterns the model is selecting. Below samples of the feature maps are displayed.
 
