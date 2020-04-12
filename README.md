@@ -16,7 +16,7 @@ The goals / steps of this project are the following:
 
 ---
 
-### 1. Examine the Dataset
+### 1. Examine the dataset
 
 The dataset used for this project is [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) and was splitted in the following way.
 
@@ -31,3 +31,17 @@ Every image has a dimension of **32 x 32 x 3** (widht, height, channels), below 
 
 ![Data_Representation](https://github.com/ajimenezjulio/P3_Traffic_Sign_Recognition/blob/master/Markdown/Data_Representation.png)
 
+
+### 2. Dataset distribution analysis
+
+Unfortunately the dataset is unbalanced and some classes have a large number of samples while others only a few, the following table and graph show this disparity.
+
+| Dataset         	|   Maximum Samples	   |   Minimum Samples	   | 
+|:-----------------:|:--------------------:|:---------------------:| 
+| Training        |  2,010  |  180  |
+| Test            |  750    |  60  |
+
+![Data_Distribution_Before_Balancing](https://github.com/ajimenezjulio/P3_Traffic_Sign_Recognition/blob/master/Markdown/Data_Distribution_Before_Balancing.png)
+
+
+### 3. Preprocess
