@@ -1,0 +1,41 @@
+
+        Architecture: 3conv-2fc 3-16-32-64-1024-84-43, Epochs 1, Batch size: 128
+        -----------------------------------------------------------------------------
+        Training   Accuracy:   0.031814
+        Validation Accuracy:   0.007483
+        Test       Accuracy:    0.007047
+        
+
+        
+        Architecture: 3conv-2fc 3-16-32-64-1024-84-43, Epochs 5, Batch size: 128
+        -----------------------------------------------------------------------------
+        Training   Accuracy:   0.256081
+        Validation Accuracy:   0.265306
+        Test       Accuracy:    0.283769
+        
+
+        
+        Architecture: 3conv-2fc 3-16-32-64-1024-84-43, Epochs 10, Batch size: 128
+        -----------------------------------------------------------------------------
+        Training   Accuracy:   0.559570
+        Validation Accuracy:   0.537642
+        Test       Accuracy:    0.539667
+        
+
+        
+        Architecture: 3conv-2fc 3-16-32-64-1024-84-43, Epochs 50, Batch size: 128
+        -----------------------------------------------------------------------------
+        Training   Accuracy:   0.962407
+        Validation Accuracy:   0.953515
+        Test       Accuracy:    0.948614
+        
+
+        
+        Architecture: 3conv-2fc 3-16-32-64-1024-84-43, Epochs 200, Batch size: 128
+        -----------------------------------------------------------------------------
+        Training   Accuracy:   0.984674
+        Validation Accuracy:   0.976417
+        Test       Accuracy:    0.975693
+        
+
+        

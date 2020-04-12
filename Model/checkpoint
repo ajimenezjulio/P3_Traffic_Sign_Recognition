@@ -1,0 +1,2 @@
+model_checkpoint_path: "3conv-2fc 3-16-32-64-1024-84-43"
+all_model_checkpoint_paths: "3conv-2fc 3-16-32-64-1024-84-43"
