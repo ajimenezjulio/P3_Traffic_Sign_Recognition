@@ -105,11 +105,14 @@ In order to get reproducible results a seed of **17** was used in this project, 
 | 5 | 0.256081 | 0.265306 | 0.283769 |
 | 10 | 0.559570 | 0.537642 | 0.539667 |
 | 50 | 0.962407 | 0.953515 | 0.948614 |
-| 200 | 0.984674 | 0.976417 | 0.975693 |
+| **200** | **0.984674** | **0.976417** | **0.975693** |
 
 ![Accuracy_Training](https://github.com/ajimenezjulio/P3_Traffic_Sign_Recognition/blob/master/Results/3conv-2fc%203-16-32-64-1024-84-43__0.0005_128_Final.jpeg)
 
+After 200 epochs the model could get above 97% of accuracy for all datasets which makes it a fairly decent approach.
 
+### Feature maps
 
+In order to understand the weights the model is using for the classification task in a better way, it is a good idea to visualize them, so we can have an idea of the abstract patterns the model is selecting. Below samples of the feature maps are displayed.
 
-## TODO: Calculate size of dataset
+![Feature_Maps](https://github.com/ajimenezjulio/P3_Traffic_Sign_Recognition/blob/master/Markdown/Feature_Maps.png)
